@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #150050;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;  
+    color: white;
+    overflow-x: hidden;
+  }
+  
+
+
+  section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #000000;
+  }
+  
+  #hero {
+    position: relative;
+  }
+
+  
+  .logo {
+    margin-right: auto;
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+  }
+
+  .logo:hover {
+    color:#00bcFF;
+  }
+  
+  
+
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #00bcFF;
+  }
+  
+  .cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #00bcff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 1);
+  }
+
+.hero {
+	width: 100%;
+  height: 50%;
+  position: relative;
+}
+.text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}
+.text span {
+	display: block;
+	margin-top: 1em;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+
+  .item1 {
+    grid-area: menu; 
+    display: flex;
+    flex-direction: row;
+    max-width: inherit;
+  }
+  .item2 { grid-area: main; }
+  .item3 { grid-area: right; }
+  .item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu menu main main right right'
+    'menu menu footer footer footer footer';
+  gap: 5px;
+  color: #fff;
+  width: 80%;
+  height: 80%;
+}
+
+.grid-container > div {
+  border: #fff 1px solid;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+  .grid-container img {
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .pink h1 {
+    font-size: 40px;
+  }
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #0d0d0d;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .logo {
+      font-size: 25px;
+    }
+    .menu {
+      display: initial;
+      font-size: 15px;
+    }
+    .pink {
+      flex-direction: column !important;
+    }
+    .grid-container {
+      height: 70%;
+    }
+
+  }
+  
+
+
+
+  .pink {
+    background: #FB2576;
+    max-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .pink a {
+    font-size: 50px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .pink a:hover {
+    color: #000;
+  }
+
+  .dark-violet {
+    background: #3F0071;
+  }
+
+
+.wave1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave1 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 106px;
+}
+
+.wave1 .shape-fill {
+  fill: #3F0071;
+}
+
+
+  .wave2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.wave2 .shape-fill {
+    fill: #3F0071;
+}
